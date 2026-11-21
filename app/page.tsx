@@ -602,7 +602,7 @@ export default function Home() {
               <h3 className="mb-4 font-bold text-white">Producto</h3>
               <ul className="space-y-2 text-sm text-slate-400">
                 <li><a href="https://app.ionmaxultimate.com/marketplace" className="hover:text-white transition">Marketplace</a></li>
-                <li><a href="https://app.ionmaxultimate.com/JSZVaa--3?registro=1" className="hover:text-white transition">Vender</a></li>
+                <li><a href="https://app.ionmaxultimate.com/registro" className="hover:text-white transition">Vender</a></li>
                 <li><a href="https://app.ionmaxultimate.com/mensajes" className="hover:text-white transition">Mensajes</a></li>
               </ul>
             </div>
