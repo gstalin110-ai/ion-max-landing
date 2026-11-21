@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Shield, Globe, Truck, Smartphone, Monitor, Tablet, Apple, BadgeCheck, Mail, Store } from 'lucide-react';
+import { ArrowRight, Shield, Globe, Truck, Smartphone, Monitor, Tablet, Apple, BadgeCheck, Phone, Store } from 'lucide-react';
 import AnioActual from './AnioActual';
 
 const APP_URL = 'https://app.ionmaxultimate.com';
@@ -165,11 +165,16 @@ export default function Home() {
       {/* Contacto */}
       <section className="border-t border-white/10 px-4 py-12 sm:px-6">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 text-center">
-          <Mail size={22} className="text-gold-400" />
+          <Phone size={22} className="text-gold-400" />
           <div>
             <h3 className="text-sm font-bold text-white">Contacto</h3>
-            <a href="mailto:contacto@ionmaxultimate.com" className="mt-1 inline-block text-sm text-slate-400 transition hover:text-gold-300">
-              contacto@ionmaxultimate.com
+            <a
+              href="https://wa.me/593980887170"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-1 inline-block text-sm text-slate-400 transition hover:text-gold-300"
+            >
+              WhatsApp: 098 088 7170
             </a>
           </div>
         </div>
