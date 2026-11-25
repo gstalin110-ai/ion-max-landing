@@ -42,7 +42,7 @@ export default function Home() {
         <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
           <div className="flex items-center gap-3">
             <Image src="/logo.png" alt="IÓN MAX" width={40} height={40} className="h-10 w-10 object-contain" />
-            <span className="titulo-display texto-dorado-premium text-xl tracking-[0.14em]">IÓN MAX - ULTEMATE</span>
+            <span className="titulo-display texto-dorado-premium text-xl tracking-[0.14em]">IÓN MAX - ULTIMATE</span>
           </div>
           <Link
             href={APP_URL}
