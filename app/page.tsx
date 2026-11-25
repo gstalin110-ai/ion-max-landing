@@ -23,8 +23,8 @@ const PARA_VENDEDORES = [
   { icono: Sparkles, titulo: 'Modo Profesional con herramientas a la medida', texto: '63 categorías de negocio: reservas con fecha y personas, medidas a medida, cotizaciones de eventos, agenda de citas y más.' },
   { icono: Package, titulo: 'Pedidos agrupados y facturas', texto: 'Cada pedido llega organizado a tu panel con ID único, estados y factura lista.' },
   { icono: Wallet, titulo: 'Plan Gratuito para empezar', texto: 'Publica y vende sin pagar nada. Mejora a Premium cuando lo necesites.' },
-  { icono: Gift, titulo: 'Gana días Pro invitando amigos', texto: 'Cada vendedor que se registre con tu link te suma 5 días de Premium. Se acumulan y los activas cuando quieras.' },
-  { icono: Users, titulo: 'Alcance +17% en el feed', texto: 'Los negocios invitados aparecen con más visibilidad en el marketplace y el feed de la app.' },
+  { icono: Gift, titulo: 'Ambos ganan 5 días Pro por invitación', texto: 'Cada persona que se registre con tu link recibe 5 días de Premium, y tú también sumas 5 días por cada una. Se acumulan sin límite.' },
+  { icono: Users, titulo: '+17% de alcance para los dos', texto: 'Tú y tu invitado aparecen con más visibilidad en productos, publicaciones y tienda dentro de la app.' },
 ];
 
 const PASOS = [
