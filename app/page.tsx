@@ -233,7 +233,7 @@ export default function Home() {
       {/* CTA final */}
       <section className="px-4 pb-20 sm:px-6">
         <div className="mx-auto max-w-3xl rounded-3xl border border-gold-400/20 bg-gradient-to-br from-gold-500/[0.08] to-transparent p-8 text-center sm:p-12">
-          <h2 className="titulo-display mb-3 text-2xl text-white sm:text-3xl">Tu tienda ecuatoriana empieza hoy</h2>
+          <h2 className="titulo-display mb-3 text-2xl text-white sm:text-3xl">Tu tienda empieza hoy</h2>
           <p className="mb-7 text-sm text-slate-400">Crea tu cuenta gratis, publica tus productos y comparte tu link. Sin instalar nada.</p>
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
