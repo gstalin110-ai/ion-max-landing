@@ -7,6 +7,7 @@ import {
   Wallet, Gift, Sparkles, CreditCard, Package,
 } from 'lucide-react';
 import AnioActual from './AnioActual';
+import PopupEncuesta from './components/PopupEncuesta';
 
 const APP_URL = 'https://app.ionmaxultimate.com';
 
@@ -35,6 +36,7 @@ const PASOS = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
+      <PopupEncuesta />
       {/* Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
