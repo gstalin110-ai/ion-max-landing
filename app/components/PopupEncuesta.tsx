@@ -120,7 +120,7 @@ export default function PopupEncuesta() {
             Responde <strong className="text-gold-300">25 preguntas rápidas</strong> y gana
             <strong className="text-gold-300"> 5 días Pro gratis</strong>.
           </p>
-          <p className="mt-1 text-xs text-slate-500">Tu opinión define las próximas funciones de IÓN MAX Ultimate.</p>
+          <p className="mt-1 text-xs text-slate-500">Tu opinión define las próximas funciones de IÓN MAX.</p>
 
           <Link
             href="/encuesta"

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import type { CSSProperties } from 'react';
 import Link from 'next/link';
 import {
-  ArrowRight, Shield, Globe, Truck, Smartphone, Monitor, Tablet, Apple,
+  ArrowRight, Shield, Globe, Truck,
   BadgeCheck, Phone, Store, ShoppingBag, CalendarDays, Users, MessageCircle,
   Wallet, Gift, Sparkles, CreditCard, Package,
 } from 'lucide-react';
@@ -42,7 +42,7 @@ export default function Home() {
         <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6">
           <div className="flex items-center gap-3">
             <Image src="/logo.png" alt="IÓN MAX" width={40} height={40} className="h-10 w-10 object-contain" />
-            <span className="titulo-display texto-dorado-premium text-xl tracking-[0.14em]">IÓN MAX ULTIMATE</span>
+            <span className="titulo-display texto-dorado-premium text-xl tracking-[0.14em]">IÓN MAX - ULTEMATE</span>
           </div>
           <Link
             href={APP_URL}
@@ -159,50 +159,22 @@ export default function Home() {
             <p className="etiqueta-lujo mb-2 text-gold-300">Disponible en</p>
             <h2 className="titulo-display text-3xl text-white">La App IÓN MAX</h2>
             <p className="mx-auto mt-3 max-w-lg text-sm text-slate-400">
-              Marketplace, tienda y panel de gestión — todo en una app web instalable.
+              Marketplace, tienda y panel de gestión — disponible como app web.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="mx-auto grid max-w-sm grid-cols-1 gap-3">
             <a
               href={APP_URL}
-              className="group relative flex flex-col items-center gap-3 rounded-2xl border border-gold-400/30 bg-gold-500/[0.08] p-5 text-center transition hover:border-gold-400/60 hover:bg-gold-500/[0.14]"
+              className="group relative flex flex-col items-center gap-3 rounded-2xl border border-gold-400/30 bg-gold-500/[0.08] p-6 text-center transition hover:border-gold-400/60 hover:bg-gold-500/[0.14]"
             >
-              <span className="absolute right-3 top-3 rounded-full bg-gold-400 px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wider text-black">Ahora</span>
-              <Globe size={28} className="text-gold-300" />
+              <span className="absolute right-3 top-3 rounded-full bg-gold-400 px-2 py-0.5 text-[9px] font-extrabold uppercase tracking-wider text-black">Disponible</span>
+              <Globe size={32} className="text-gold-300" />
               <div>
-                <p className="text-sm font-bold text-white">Web App</p>
+                <p className="text-sm font-bold text-white">App Web</p>
                 <p className="text-[11px] text-slate-400">Cualquier navegador</p>
               </div>
             </a>
-            <div className="flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.02] p-5 text-center">
-              <Smartphone size={28} className="text-slate-400" />
-              <div>
-                <p className="text-sm font-bold text-white">Android</p>
-                <p className="text-[11px] text-slate-500">Próximamente</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.02] p-5 text-center">
-              <Apple size={28} className="text-slate-400" />
-              <div>
-                <p className="text-sm font-bold text-white">iOS</p>
-                <p className="text-[11px] text-slate-500">Próximamente</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.02] p-5 text-center">
-              <Monitor size={28} className="text-slate-400" />
-              <div>
-                <p className="text-sm font-bold text-white">Windows</p>
-                <p className="text-[11px] text-slate-500">Próximamente</p>
-              </div>
-            </div>
-            <div className="col-span-2 flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.02] p-5 text-center sm:col-span-1">
-              <Tablet size={28} className="text-slate-400" />
-              <div>
-                <p className="text-sm font-bold text-white">Tablets</p>
-                <p className="text-[11px] text-slate-500">Vía app web</p>
-              </div>
-            </div>
           </div>
 
           <p className="mt-6 text-center text-xs text-slate-500">
