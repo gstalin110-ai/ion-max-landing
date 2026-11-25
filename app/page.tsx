@@ -11,21 +11,19 @@ import AnioActual from './AnioActual';
 const APP_URL = 'https://app.ionmaxultimate.com';
 
 const PARA_COMPRADORES = [
-  { icono: ShoppingBag, titulo: 'Marketplace con miles de productos', texto: 'Explora el catálogo de tiendas verificadas: moda, tecnología, hogar, belleza y más.' },
-  { icono: CalendarDays, titulo: 'Reserva y agenda desde la app', texto: 'Restaurantes, spas, consultorios y servicios reservan con fecha, hora y datos reales — sin llamadas.' },
+  { icono: ShoppingBag, titulo: 'Marketplace con miles de productos', texto: 'Explora el catálogo de tiendas de todo tipo: moda, tecnología, hogar, belleza y más.' },
+  { icono: CalendarDays, titulo: 'Agenda servicios sin llamadas', texto: 'Restaurantes, spas, consultorios y profesionales: confirma con fecha, hora y datos reales — sin llamadas ni esperas.' },
   { icono: Package, titulo: 'Compra completa por tienda', texto: 'Arma tu pedido con varios productos de una misma tienda y envíalo en un solo mensaje.' },
   { icono: MessageCircle, titulo: 'Chat directo con el vendedor', texto: 'Preguntas, negociación y coordinación de entrega en un chat privado e integrado.' },
   { icono: CreditCard, titulo: 'Pago seguro con PayPal', texto: 'Compra planes y servicios con el respaldo de PayPal donde esté disponible.' },
-  { icono: Shield, titulo: 'Tiendas verificadas', texto: 'Las tiendas con insignia de verificación pasaron revisión de un administrador.' },
 ];
 
 const PARA_VENDEDORES = [
-  { icono: Store, titulo: 'Tu propia tienda online gratis', texto: 'Catálogo con fotos, precios y descripción. Tu link único para compartir por WhatsApp o redes.' },
+  { icono: Store, titulo: 'Tu propia tienda online', texto: 'Catálogo con fotos, precios y descripción. Tu link único para compartir por WhatsApp o redes.' },
   { icono: Sparkles, titulo: 'Modo Profesional con herramientas a la medida', texto: '63 categorías de negocio: reservas con fecha y personas, medidas a medida, cotizaciones de eventos, agenda de citas y más.' },
-  { icono: Package, titulo: 'Pedidos agrupados y facturas', texto: 'Cada pedido llega organizado a tu panel con ID único, estados y factura lista.' },
+  { icono: Package, titulo: 'Pedidos agrupados y comprobantes', texto: 'Cada pedido llega organizado a tu panel con ID único, estados y comprobante listo.' },
   { icono: Wallet, titulo: 'Plan Gratuito para empezar', texto: 'Publica y vende sin pagar nada. Mejora a Premium cuando lo necesites.' },
-  { icono: Gift, titulo: 'Ambos ganan 5 días Pro por invitación', texto: 'Cada persona que se registre con tu link recibe 5 días de Premium, y tú también sumas 5 días por cada una. Se acumulan sin límite.' },
-  { icono: Users, titulo: '+17% de alcance para los dos', texto: 'Tú y tu invitado aparecen con más visibilidad en productos, publicaciones y tienda dentro de la app.' },
+  { icono: Gift, titulo: 'Programa de referidos', texto: 'Comparte tu link: tú y tu invitado reciben 5 días de Premium cada uno, y ambos ganan +17% más alcance en productos, publicaciones y tienda. Se acumulan sin límite.' },
 ];
 
 const PASOS = [
@@ -68,8 +66,8 @@ export default function Home() {
             Todo tu comercio,<br />en una sola app
           </h1>
           <p className="hero-entrada mx-auto mb-9 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg" style={{ '--hero-delay': '240ms' } as CSSProperties}>
-            IÓN MAX conecta compradores con tiendas verificadas.
-            Explora productos, reserva servicios a la medida y vende con tu propia tienda online — gratis.
+            IÓN MAX conecta compradores con negocios de todo tipo.
+            Explora productos, encuentra servicios y vende con tu propia tienda online — gratis.
           </p>
           <div className="hero-entrada flex flex-col items-center justify-center gap-3 sm:flex-row" style={{ '--hero-delay': '360ms' } as CSSProperties}>
             <Link
@@ -99,9 +97,9 @@ export default function Home() {
         <div className="mx-auto max-w-5xl">
           <div className="reveal mb-10 text-center">
             <p className="etiqueta-lujo mb-2 text-gold-300">Para compradores</p>
-            <h2 className="titulo-display text-3xl text-white">Encuentra y reserva en un solo lugar</h2>
+            <h2 className="titulo-display text-3xl text-white">Encuentra todo en un solo lugar</h2>
             <p className="mx-auto mt-3 max-w-lg text-sm text-slate-400">
-              Desde productos hasta servicios profesionales — todo en la app.
+              Desde productos hasta servicios profesionales — todo en un solo lugar.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -123,7 +121,7 @@ export default function Home() {
         <div className="mx-auto max-w-5xl">
           <div className="reveal mb-10 text-center">
             <p className="etiqueta-lujo mb-2 text-gold-300">Para vendedores</p>
-            <h2 className="titulo-display text-3xl text-white">Tu negocio digital, sin mensualidad</h2>
+            <h2 className="titulo-display text-3xl text-white">Tu negocio digital, en serio</h2>
             <p className="mx-auto mt-3 max-w-lg text-sm text-slate-400">
               Convierte tu catálogo de WhatsApp en una tienda profesional con herramientas pensadas para tu rubro.
             </p>
