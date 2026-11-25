@@ -10,7 +10,7 @@ import AnioActual from './AnioActual';
 const APP_URL = 'https://app.ionmaxultimate.com';
 
 const PARA_COMPRADORES = [
-  { icono: ShoppingBag, titulo: 'Marketplace con miles de productos', texto: 'Explora el catálogo de tiendas ecuatorianas: moda, tecnología, hogar, belleza y más.' },
+  { icono: ShoppingBag, titulo: 'Marketplace con miles de productos', texto: 'Explora el catálogo de tiendas verificadas: moda, tecnología, hogar, belleza y más.' },
   { icono: CalendarDays, titulo: 'Reserva y agenda desde la app', texto: 'Restaurantes, spas, consultorios y servicios reservan con fecha, hora y datos reales — sin llamadas.' },
   { icono: Package, titulo: 'Compra completa por tienda', texto: 'Arma tu pedido con varios productos de una misma tienda y envíalo en un solo mensaje.' },
   { icono: MessageCircle, titulo: 'Chat directo con el vendedor', texto: 'Preguntas, negociación y coordinación de entrega en un chat privado e integrado.' },
@@ -60,13 +60,13 @@ export default function Home() {
         <div className="relative mx-auto max-w-3xl text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold-400/30 bg-gold-500/10 px-4 py-1.5">
             <BadgeCheck size={14} className="text-gold-400" />
-            <span className="text-xs font-semibold tracking-wide text-gold-200">Marketplace ecuatoriano — compra, vende y reserva</span>
+            <span className="text-xs font-semibold tracking-wide text-gold-200">Marketplace — compra, vende y reserva</span>
           </div>
           <h1 className="titulo-display mb-5 text-4xl leading-tight sm:text-5xl lg:text-6xl">
             Todo tu comercio,<br />en una sola app
           </h1>
           <p className="mx-auto mb-9 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg">
-            IÓN MAX conecta compradores con tiendas ecuatorianas verificadas.
+            IÓN MAX conecta compradores con tiendas verificadas.
             Explora productos, reserva servicios a la medida y vende con tu propia tienda online — gratis.
           </p>
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -278,7 +278,7 @@ export default function Home() {
             <Image src="/logo.png" alt="IÓN MAX" width={28} height={28} className="h-7 w-7 object-contain" />
             <span className="text-sm font-bold tracking-wide text-white">IÓN MAX</span>
           </div>
-          <p className="text-xs text-slate-500">© <AnioActual /> IÓN MAX — Ecuador. Todos los derechos reservados.</p>
+          <p className="text-xs text-slate-500">© <AnioActual /> IÓN MAX — Dedicados a Ecuador, próximamente más países. Todos los derechos reservados.</p>
           <div className="flex gap-5 text-xs text-slate-400">
             <Link href={`${APP_URL}/politicas`} className="transition hover:text-white">Políticas</Link>
             <a href={`${APP_URL}/marketplace`} className="transition hover:text-white">Marketplace</a>

@@ -14,7 +14,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "IÓN MAX - ULTIMATE",
-  description: "IÓN MAX - Marca empresarial líder en Ecuador. Descubre nuestros productos: Tienda Online, y más soluciones digitales innovadoras.",
+  description: "IÓN MAX - Marketplace de compras y servicios. Compra, vende y reserva — dedicados a Ecuador, próximamente más países.",
   metadataBase: new URL("https://ionmaxultimate.com"),
   alternates: {
     canonical: "https://ionmaxultimate.com",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "IÓN MAX - ULTIMATE",
-    description: "IÓN MAX - Marca empresarial líder en Ecuador. Descubre nuestros productos: Tienda Online, y más soluciones digitales innovadoras.",
+    description: "IÓN MAX - Marketplace de compras y servicios. Compra, vende y reserva — dedicados a Ecuador, próximamente más países.",
     url: "https://ionmaxultimate.com",
     siteName: "IÓN MAX",
     images: [
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "IÓN MAX - ULTIMATE",
-    description: "IÓN MAX - Marca empresarial líder en Ecuador. Descubre nuestros productos: Tienda Online, y más soluciones digitales innovadoras.",
+    description: "IÓN MAX - Marketplace de compras y servicios. Compra, vende y reserva — dedicados a Ecuador, próximamente más países.",
     images: ["/logo.png"],
   },
 };
