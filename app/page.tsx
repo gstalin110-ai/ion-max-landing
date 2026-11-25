@@ -1,9 +1,37 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Shield, Globe, Truck, Smartphone, Monitor, Tablet, Apple, BadgeCheck, Phone, Store } from 'lucide-react';
+import {
+  ArrowRight, Shield, Globe, Truck, Smartphone, Monitor, Tablet, Apple,
+  BadgeCheck, Phone, Store, ShoppingBag, CalendarDays, Users, MessageCircle,
+  Wallet, Gift, Sparkles, CreditCard, Package,
+} from 'lucide-react';
 import AnioActual from './AnioActual';
 
 const APP_URL = 'https://app.ionmaxultimate.com';
+
+const PARA_COMPRADORES = [
+  { icono: ShoppingBag, titulo: 'Marketplace con miles de productos', texto: 'Explora el catálogo de tiendas ecuatorianas: moda, tecnología, hogar, belleza y más.' },
+  { icono: CalendarDays, titulo: 'Reserva y agenda desde la app', texto: 'Restaurantes, spas, consultorios y servicios reservan con fecha, hora y datos reales — sin llamadas.' },
+  { icono: Package, titulo: 'Compra completa por tienda', texto: 'Arma tu pedido con varios productos de una misma tienda y envíalo en un solo mensaje.' },
+  { icono: MessageCircle, titulo: 'Chat directo con el vendedor', texto: 'Preguntas, negociación y coordinación de entrega en un chat privado e integrado.' },
+  { icono: CreditCard, titulo: 'Pago seguro con PayPal', texto: 'Compra planes y servicios con el respaldo de PayPal donde esté disponible.' },
+  { icono: Shield, titulo: 'Tiendas verificadas', texto: 'Las tiendas con insignia de verificación pasaron revisión de un administrador.' },
+];
+
+const PARA_VENDEDORES = [
+  { icono: Store, titulo: 'Tu propia tienda online gratis', texto: 'Catálogo con fotos, precios y descripción. Tu link único para compartir por WhatsApp o redes.' },
+  { icono: Sparkles, titulo: 'Modo Profesional con herramientas a la medida', texto: '63 categorías de negocio: reservas con fecha y personas, medidas a medida, cotizaciones de eventos, agenda de citas y más.' },
+  { icono: Package, titulo: 'Pedidos agrupados y facturas', texto: 'Cada pedido llega organizado a tu panel con ID único, estados y factura lista.' },
+  { icono: Wallet, titulo: 'Plan Gratuito para empezar', texto: 'Publica y vende sin pagar nada. Mejora a Premium cuando lo necesites.' },
+  { icono: Gift, titulo: 'Gana días Pro invitando amigos', texto: 'Cada vendedor que se registre con tu link te suma 5 días de Premium. Se acumulan y los activas cuando quieras.' },
+  { icono: Users, titulo: 'Alcance +17% en el feed', texto: 'Los negocios invitados aparecen con más visibilidad en el marketplace y el feed de la app.' },
+];
+
+const PASOS = [
+  { numero: '1', titulo: 'Crea tu cuenta', texto: 'Registro gratis con Google o correo. Verificación de edad incluida.' },
+  { numero: '2', titulo: 'Publica o explora', texto: 'Vendedores: sube tus productos y activa tu tienda. Compradores: explora y reserva.' },
+  { numero: '3', titulo: 'Vende y crece', texto: 'Recibe pedidos y solicitudes en tu panel, compártelos por WhatsApp y gana con referidos.' },
+];
 
 export default function Home() {
   return (
@@ -26,19 +54,20 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="relative overflow-hidden px-4 pb-16 pt-32 sm:px-6 sm:pb-20 sm:pt-36">
+      <section className="relative overflow-hidden px-4 pb-16 pt-32 sm:px-6 sm:pb-24 sm:pt-40">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,215,0,0.12),transparent_55%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_60%,rgba(255,215,0,0.06),transparent_50%)]" />
         <div className="relative mx-auto max-w-3xl text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold-400/30 bg-gold-500/10 px-4 py-1.5">
             <BadgeCheck size={14} className="text-gold-400" />
-            <span className="text-xs font-semibold tracking-wide text-gold-200">Marca ecuatoriana de comercio digital</span>
+            <span className="text-xs font-semibold tracking-wide text-gold-200">Marketplace ecuatoriano — compra, vende y reserva</span>
           </div>
           <h1 className="titulo-display mb-5 text-4xl leading-tight sm:text-5xl lg:text-6xl">
-            IÓN MAX
+            Todo tu comercio,<br />en una sola app
           </h1>
           <p className="mx-auto mb-9 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg">
-            Creamos productos digitales que conectan vendedores y compradores en Ecuador.
-            Nuestro primer producto ya está disponible.
+            IÓN MAX conecta compradores con tiendas ecuatorianas verificadas.
+            Explora productos, reserva servicios a la medida y vende con tu propia tienda online — gratis.
           </p>
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
@@ -46,7 +75,7 @@ export default function Home() {
               className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gold-500 px-8 py-3.5 text-sm font-bold text-black transition hover:bg-gold-400 sm:w-auto"
             >
               <Globe size={18} />
-              Abrir la App Web
+              Explorar la App
               <ArrowRight size={18} />
             </Link>
             <Link
@@ -54,24 +83,84 @@ export default function Home() {
               className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10 sm:w-auto"
             >
               <Store size={18} />
-              Quiero vender
+              Abrir mi tienda gratis
+            </Link>
+          </div>
+          <p className="mt-5 text-[11px] text-slate-500">
+            Sin costo para empezar · Funciona en cualquier navegador · Instalable como app
+          </p>
+        </div>
+      </section>
+
+      {/* Para compradores */}
+      <section className="border-y border-white/10 bg-white/[0.02] px-4 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-10 text-center">
+            <p className="etiqueta-lujo mb-2 text-gold-300">Para compradores</p>
+            <h2 className="titulo-display text-3xl text-white">Encuentra y reserva en un solo lugar</h2>
+            <p className="mx-auto mt-3 max-w-lg text-sm text-slate-400">
+              Desde productos hasta servicios profesionales — todo en la app.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {PARA_COMPRADORES.map((item) => (
+              <div key={item.titulo} className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.02] p-5 transition hover:border-gold-400/30">
+                <item.icono size={22} className="mt-0.5 shrink-0 text-gold-400" />
+                <div>
+                  <h3 className="text-sm font-bold text-white">{item.titulo}</h3>
+                  <p className="mt-1 text-xs leading-relaxed text-slate-400">{item.texto}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Para vendedores */}
+      <section className="px-4 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-10 text-center">
+            <p className="etiqueta-lujo mb-2 text-gold-300">Para vendedores</p>
+            <h2 className="titulo-display text-3xl text-white">Tu negocio digital, sin mensualidad</h2>
+            <p className="mx-auto mt-3 max-w-lg text-sm text-slate-400">
+              Convierte tu catálogo de WhatsApp en una tienda profesional con herramientas pensadas para tu rubro.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {PARA_VENDEDORES.map((item) => (
+              <div key={item.titulo} className="flex items-start gap-4 rounded-2xl border border-gold-400/15 bg-gold-500/[0.04] p-5 transition hover:border-gold-400/40">
+                <item.icono size={22} className="mt-0.5 shrink-0 text-gold-300" />
+                <div>
+                  <h3 className="text-sm font-bold text-white">{item.titulo}</h3>
+                  <p className="mt-1 text-xs leading-relaxed text-slate-400">{item.texto}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 flex justify-center">
+            <Link
+              href={`${APP_URL}/registro`}
+              className="inline-flex items-center gap-2 rounded-xl bg-gold-500 px-7 py-3 text-sm font-bold text-black transition hover:bg-gold-400"
+            >
+              <Store size={17} />
+              Crear mi tienda ahora
+              <ArrowRight size={16} />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Nuestro primer producto: la app */}
+      {/* Plataformas */}
       <section className="border-y border-white/10 bg-white/[0.02] px-4 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-5xl">
           <div className="mb-10 text-center">
-            <p className="etiqueta-lujo mb-2 text-gold-300">Nuestro primer producto</p>
+            <p className="etiqueta-lujo mb-2 text-gold-300">Disponible en</p>
             <h2 className="titulo-display text-3xl text-white">La App IÓN MAX</h2>
             <p className="mx-auto mt-3 max-w-lg text-sm text-slate-400">
-              Marketplace y centro de gestión para compradores y vendedores. Compra, vende, chatea y gestiona tu tienda.
+              Marketplace, tienda y panel de gestión — todo en una app web instalable.
             </p>
           </div>
 
-          {/* Plataformas */}
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
             <a
               href={APP_URL}
@@ -120,29 +209,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Confianza — solo beneficios reales de la app */}
+      {/* Cómo funciona */}
       <section className="px-4 py-16 sm:px-6 sm:py-20">
-        <div className="mx-auto grid max-w-5xl gap-4 sm:grid-cols-3">
-          <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.02] p-6">
-            <Truck size={24} className="mt-0.5 shrink-0 text-gold-400" />
-            <div>
-              <h3 className="text-sm font-bold text-white">Envíos a todo Ecuador</h3>
-              <p className="mt-1 text-xs leading-relaxed text-slate-400">Compras con envío a domicilio desde cualquier parte del país.</p>
-            </div>
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-10 text-center">
+            <p className="etiqueta-lujo mb-2 text-gold-300">Cómo funciona</p>
+            <h2 className="titulo-display text-3xl text-white">Tres pasos y estás dentro</h2>
           </div>
-          <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.02] p-6">
-            <Shield size={24} className="mt-0.5 shrink-0 text-emerald-400" />
-            <div>
-              <h3 className="text-sm font-bold text-white">Vendedores verificados</h3>
-              <p className="mt-1 text-xs leading-relaxed text-slate-400">Cada tienda pasa por un proceso de verificación antes de publicar.</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.02] p-6">
-            <Smartphone size={24} className="mt-0.5 shrink-0 text-blue-400" />
-            <div>
-              <h3 className="text-sm font-bold text-white">Chat y pedidos integrados</h3>
-              <p className="mt-1 text-xs leading-relaxed text-slate-400">Habla directo con el vendedor y gestiona tus pedidos desde la app.</p>
-            </div>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {PASOS.map((paso) => (
+              <div key={paso.numero} className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 text-center">
+                <span className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full border border-gold-400/30 bg-gold-500/10 text-sm font-extrabold text-gold-300">
+                  {paso.numero}
+                </span>
+                <h3 className="text-sm font-bold text-white">{paso.titulo}</h3>
+                <p className="mt-1.5 text-xs leading-relaxed text-slate-400">{paso.texto}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -150,15 +233,23 @@ export default function Home() {
       {/* CTA final */}
       <section className="px-4 pb-20 sm:px-6">
         <div className="mx-auto max-w-3xl rounded-3xl border border-gold-400/20 bg-gradient-to-br from-gold-500/[0.08] to-transparent p-8 text-center sm:p-12">
-          <h2 className="titulo-display mb-3 text-2xl text-white sm:text-3xl">Empieza hoy</h2>
-          <p className="mb-7 text-sm text-slate-400">Abre la app web en tu navegador — no necesitas instalar nada para empezar.</p>
-          <Link
-            href={APP_URL}
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-gold-500 px-8 py-3.5 text-sm font-bold text-black transition hover:bg-gold-400"
-          >
-            Abrir IÓN MAX
-            <ArrowRight size={18} />
-          </Link>
+          <h2 className="titulo-display mb-3 text-2xl text-white sm:text-3xl">Tu tienda ecuatoriana empieza hoy</h2>
+          <p className="mb-7 text-sm text-slate-400">Crea tu cuenta gratis, publica tus productos y comparte tu link. Sin instalar nada.</p>
+          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link
+              href={APP_URL}
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-gold-500 px-8 py-3.5 text-sm font-bold text-black transition hover:bg-gold-400"
+            >
+              Abrir IÓN MAX
+              <ArrowRight size={18} />
+            </Link>
+            <Link
+              href={`${APP_URL}/registro`}
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              Quiero vender
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -189,7 +280,7 @@ export default function Home() {
           </div>
           <p className="text-xs text-slate-500">© <AnioActual /> IÓN MAX — Ecuador. Todos los derechos reservados.</p>
           <div className="flex gap-5 text-xs text-slate-400">
-            <Link href={`${APP_URL}/politicas`} className="transition hover:text-white">Términos</Link>
+            <Link href={`${APP_URL}/politicas`} className="transition hover:text-white">Políticas</Link>
             <a href={`${APP_URL}/marketplace`} className="transition hover:text-white">Marketplace</a>
             <a href={`${APP_URL}/registro`} className="transition hover:text-white">Vender</a>
           </div>
