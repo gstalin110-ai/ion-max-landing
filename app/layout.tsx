@@ -14,8 +14,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "IÓN MAX - ULTIMATE | Marca de productos digitales",
-  description: "IÓN MAX Ultimate es la marca detrás de productos digitales innovadores. Hoy: Tienda Online — marketplace para comprar, vender y reservar servicios. Más productos próximamente.",
+  title: "IÓN MAX - ULTIMATE",
+  description: "IÓN MAX - Marketplace de compras y servicios. Compra, vende y reserva — dedicados a Ecuador, próximamente más países.",
   metadataBase: new URL("https://ionmaxultimate.com"),
   alternates: {
     canonical: "https://ionmaxultimate.com",

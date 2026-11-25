@@ -62,14 +62,14 @@ export default function Home() {
         <div className="relative mx-auto max-w-3xl text-center">
           <div className="hero-entrada mb-6 inline-flex items-center gap-2 rounded-full border border-gold-400/30 bg-gold-500/10 px-4 py-1.5" style={{ '--hero-delay': '0ms' } as CSSProperties}>
             <BadgeCheck size={14} className="text-gold-400" />
-            <span className="text-xs font-semibold tracking-wide text-gold-200">IÓN MAX Ultimate — más productos próximamente</span>
+            <span className="text-xs font-semibold tracking-wide text-gold-200">Marketplace — compra, vende y reserva</span>
           </div>
           <h1 className="hero-entrada titulo-display texto-brillo-dorado mb-5 text-4xl leading-tight sm:text-5xl lg:text-6xl" style={{ '--hero-delay': '120ms' } as CSSProperties}>
-            IÓN MAX · Tienda Online<br /><span className="text-3xl sm:text-4xl lg:text-5xl text-white/80">Tu comercio, en una sola app</span>
+            Todo tu comercio,<br />en una sola app
           </h1>
           <p className="hero-entrada mx-auto mb-9 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg" style={{ '--hero-delay': '240ms' } as CSSProperties}>
-            IÓN MAX es la marca. <strong className="text-gold-300">Tienda Online</strong> es nuestro primer producto:
-            conecta compradores con negocios de todo tipo. Explora productos, encuentra servicios y vende con tu propia tienda — gratis.
+            IÓN MAX conecta compradores con negocios de todo tipo.
+            Explora productos, encuentra servicios y vende con tu propia tienda online — gratis.
           </p>
           <div className="hero-entrada flex flex-col items-center justify-center gap-3 sm:flex-row" style={{ '--hero-delay': '360ms' } as CSSProperties}>
             <Link
@@ -157,9 +157,9 @@ export default function Home() {
         <div className="mx-auto max-w-5xl">
           <div className="reveal mb-10 text-center">
             <p className="etiqueta-lujo mb-2 text-gold-300">Disponible en</p>
-            <h2 className="titulo-display text-3xl text-white">Productos de la marca</h2>
+            <h2 className="titulo-display text-3xl text-white">La App IÓN MAX</h2>
             <p className="mx-auto mt-3 max-w-lg text-sm text-slate-400">
-              IÓN MAX Ultimate agrupa productos digitales. Hoy: Tienda Online — mañana, más.
+              Marketplace, tienda y panel de gestión — todo en una app web instalable.
             </p>
           </div>
 
@@ -202,22 +202,6 @@ export default function Home() {
                 <p className="text-sm font-bold text-white">Tablets</p>
                 <p className="text-[11px] text-slate-500">Vía app web</p>
               </div>
-            </div>
-          </div>
-
-          {/* Próximos productos de la marca */}
-          <div className="reveal mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3">
-            <div className="rounded-2xl border border-dashed border-gold-400/30 bg-gold-500/[0.04] p-5 text-center">
-              <p className="text-sm font-bold text-gold-300">Producto 02</p>
-              <p className="mt-1 text-[11px] text-slate-500">Próximamente</p>
-            </div>
-            <div className="rounded-2xl border border-dashed border-gold-400/30 bg-gold-500/[0.04] p-5 text-center">
-              <p className="text-sm font-bold text-gold-300">Producto 03</p>
-              <p className="mt-1 text-[11px] text-slate-500">Próximamente</p>
-            </div>
-            <div className="rounded-2xl border border-dashed border-gold-400/30 bg-gold-500/[0.04] p-5 text-center">
-              <p className="text-sm font-bold text-gold-300">Producto 04</p>
-              <p className="mt-1 text-[11px] text-slate-500">Próximamente</p>
             </div>
           </div>
 
