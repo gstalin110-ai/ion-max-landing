@@ -9,6 +9,7 @@ const CLAVE_VISTO = 'ion-max-popup-encuesta-visto';
 export default function PopupEncuesta() {
   const [visible, setVisible] = useState(false);
   const [saliendo, setSaliendo] = useState(false);
+  const [puedeCerrar, setPuedeCerrar] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -59,17 +60,22 @@ export default function PopupEncuesta() {
     };
     raf = requestAnimationFrame(dibujar);
 
-    // Auto-cierre suave a los 6 segundos
-    const cierre = setTimeout(cerrar, 6000);
     return () => {
       cancelAnimationFrame(raf);
-      clearTimeout(cierre);
       window.removeEventListener('resize', resize);
     };
   }, [visible]);
 
+  // La X se habilita a los 3 segundos; luego el popup se queda hasta cerrarlo
+  useEffect(() => {
+    if (!visible) return;
+    setPuedeCerrar(false);
+    const t = setTimeout(() => setPuedeCerrar(true), 3000);
+    return () => clearTimeout(t);
+  }, [visible]);
+
   const cerrar = () => {
-    if (saliendo) return;
+    if (saliendo || !puedeCerrar) return;
     setSaliendo(true);
     setTimeout(() => {
       setVisible(false);
@@ -93,8 +99,13 @@ export default function PopupEncuesta() {
 
         <button
           onClick={cerrar}
+          disabled={!puedeCerrar}
           aria-label="Cerrar"
-          className="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-slate-400 transition hover:bg-white/20 hover:text-white"
+          className={`absolute right-4 top-4 rounded-full p-2 transition ${
+            puedeCerrar
+              ? 'bg-white/10 text-slate-400 hover:bg-white/20 hover:text-white'
+              : 'bg-white/5 text-slate-600 cursor-not-allowed'
+          }`}
         >
           <X size={16} />
         </button>
@@ -119,7 +130,7 @@ export default function PopupEncuesta() {
             Responder ahora
             <ArrowRight size={16} />
           </Link>
-          <p className="mt-3 text-[10px] text-slate-600">Esta ventana se cierra sola en unos segundos</p>
+          <p className="mt-3 text-[10px] text-slate-600">Puedes cerrarla cuando quieras</p>
         </div>
       </div>
     </div>
