@@ -479,3 +479,58 @@ img {
   font-weight: 700;
   letter-spacing: -0.02em;
 }
+
+/* ===== Marca de agua: logo gigante de fondo ===== */
+@keyframes marca-flotar {
+  0%, 100% { transform: translate(-50%, -50%) scale(1) rotate(-4deg); }
+  50% { transform: translate(-50%, -54%) scale(1.04) rotate(-2deg); }
+}
+.marca-fondo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(90vw, 720px);
+  height: auto;
+  opacity: 0.055;
+  filter: blur(3px) saturate(0.6);
+  pointer-events: none;
+  user-select: none;
+  animation: marca-flotar 14s ease-in-out infinite;
+}
+@media (max-width: 640px) {
+  .marca-fondo { width: 130vw; opacity: 0.045; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marca-fondo { animation: none; }
+}
+
+/* ===== Entrada escalonada para hero ===== */
+@keyframes hero-entrada {
+  0% { opacity: 0; transform: translateY(26px); filter: blur(8px); }
+  100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+.hero-entrada {
+  opacity: 0;
+  animation: hero-entrada 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--hero-delay, 0ms);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-entrada { opacity: 1; animation: none; }
+}
+
+/* ===== Brillo dorado animado en titulares ===== */
+@keyframes brillo-dorado {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.texto-brillo-dorado {
+  background: linear-gradient(120deg, #f5f6f7 20%, #c4cbd3 40%, #ffffff 55%, #9da5af 70%, #e8ebef 85%);
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: brillo-dorado 7s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .texto-brillo-dorado { animation: none; }
+}

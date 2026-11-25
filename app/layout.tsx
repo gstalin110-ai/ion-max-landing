@@ -1,3 +1,4 @@
+import AnimacionReveal from "./components/AnimacionReveal";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -66,6 +67,7 @@ export default function RootLayout({
       className={`${inter.variable} font-sans h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans text-white">
+        <AnimacionReveal />
         <main className="flex-1">{children}</main>
       </body>
     </html>

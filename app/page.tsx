@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import type { CSSProperties } from 'react';
 import Link from 'next/link';
 import {
   ArrowRight, Shield, Globe, Truck, Smartphone, Monitor, Tablet, Apple,
@@ -57,19 +58,20 @@ export default function Home() {
       <section className="relative overflow-hidden px-4 pb-16 pt-32 sm:px-6 sm:pb-24 sm:pt-40">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,215,0,0.12),transparent_55%)]" />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_60%,rgba(255,215,0,0.06),transparent_50%)]" />
+        <Image src="/logo.png" alt="" width={640} height={640} className="marca-fondo" aria-hidden="true" />
         <div className="relative mx-auto max-w-3xl text-center">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold-400/30 bg-gold-500/10 px-4 py-1.5">
+          <div className="hero-entrada mb-6 inline-flex items-center gap-2 rounded-full border border-gold-400/30 bg-gold-500/10 px-4 py-1.5" style={{ '--hero-delay': '0ms' } as CSSProperties}>
             <BadgeCheck size={14} className="text-gold-400" />
             <span className="text-xs font-semibold tracking-wide text-gold-200">Marketplace — compra, vende y reserva</span>
           </div>
-          <h1 className="titulo-display mb-5 text-4xl leading-tight sm:text-5xl lg:text-6xl">
+          <h1 className="hero-entrada titulo-display texto-brillo-dorado mb-5 text-4xl leading-tight sm:text-5xl lg:text-6xl" style={{ '--hero-delay': '120ms' } as CSSProperties}>
             Todo tu comercio,<br />en una sola app
           </h1>
-          <p className="mx-auto mb-9 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg">
+          <p className="hero-entrada mx-auto mb-9 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg" style={{ '--hero-delay': '240ms' } as CSSProperties}>
             IÓN MAX conecta compradores con tiendas verificadas.
             Explora productos, reserva servicios a la medida y vende con tu propia tienda online — gratis.
           </p>
-          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="hero-entrada flex flex-col items-center justify-center gap-3 sm:flex-row" style={{ '--hero-delay': '360ms' } as CSSProperties}>
             <Link
               href={APP_URL}
               className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gold-500 px-8 py-3.5 text-sm font-bold text-black transition hover:bg-gold-400 sm:w-auto"
@@ -86,7 +88,7 @@ export default function Home() {
               Abrir mi tienda gratis
             </Link>
           </div>
-          <p className="mt-5 text-[11px] text-slate-500">
+          <p className="hero-entrada mt-5 text-[11px] text-slate-500" style={{ '--hero-delay': '480ms' } as CSSProperties}>
             Sin costo para empezar · Funciona en cualquier navegador · Instalable como app
           </p>
         </div>
@@ -95,7 +97,7 @@ export default function Home() {
       {/* Para compradores */}
       <section className="border-y border-white/10 bg-white/[0.02] px-4 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-5xl">
-          <div className="mb-10 text-center">
+          <div className="reveal mb-10 text-center">
             <p className="etiqueta-lujo mb-2 text-gold-300">Para compradores</p>
             <h2 className="titulo-display text-3xl text-white">Encuentra y reserva en un solo lugar</h2>
             <p className="mx-auto mt-3 max-w-lg text-sm text-slate-400">
@@ -104,7 +106,7 @@ export default function Home() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PARA_COMPRADORES.map((item) => (
-              <div key={item.titulo} className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.02] p-5 transition hover:border-gold-400/30">
+              <div key={item.titulo} className="reveal flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.02] p-5 transition hover:border-gold-400/30 hover:-translate-y-0.5">
                 <item.icono size={22} className="mt-0.5 shrink-0 text-gold-400" />
                 <div>
                   <h3 className="text-sm font-bold text-white">{item.titulo}</h3>
@@ -119,7 +121,7 @@ export default function Home() {
       {/* Para vendedores */}
       <section className="px-4 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-5xl">
-          <div className="mb-10 text-center">
+          <div className="reveal mb-10 text-center">
             <p className="etiqueta-lujo mb-2 text-gold-300">Para vendedores</p>
             <h2 className="titulo-display text-3xl text-white">Tu negocio digital, sin mensualidad</h2>
             <p className="mx-auto mt-3 max-w-lg text-sm text-slate-400">
@@ -128,7 +130,7 @@ export default function Home() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PARA_VENDEDORES.map((item) => (
-              <div key={item.titulo} className="flex items-start gap-4 rounded-2xl border border-gold-400/15 bg-gold-500/[0.04] p-5 transition hover:border-gold-400/40">
+              <div key={item.titulo} className="reveal flex items-start gap-4 rounded-2xl border border-gold-400/15 bg-gold-500/[0.04] p-5 transition hover:border-gold-400/40 hover:-translate-y-0.5">
                 <item.icono size={22} className="mt-0.5 shrink-0 text-gold-300" />
                 <div>
                   <h3 className="text-sm font-bold text-white">{item.titulo}</h3>
@@ -153,7 +155,7 @@ export default function Home() {
       {/* Plataformas */}
       <section className="border-y border-white/10 bg-white/[0.02] px-4 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-5xl">
-          <div className="mb-10 text-center">
+          <div className="reveal mb-10 text-center">
             <p className="etiqueta-lujo mb-2 text-gold-300">Disponible en</p>
             <h2 className="titulo-display text-3xl text-white">La App IÓN MAX</h2>
             <p className="mx-auto mt-3 max-w-lg text-sm text-slate-400">
@@ -212,13 +214,13 @@ export default function Home() {
       {/* Cómo funciona */}
       <section className="px-4 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-5xl">
-          <div className="mb-10 text-center">
+          <div className="reveal mb-10 text-center">
             <p className="etiqueta-lujo mb-2 text-gold-300">Cómo funciona</p>
             <h2 className="titulo-display text-3xl text-white">Tres pasos y estás dentro</h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-3">
             {PASOS.map((paso) => (
-              <div key={paso.numero} className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 text-center">
+              <div key={paso.numero} className="reveal rounded-2xl border border-white/10 bg-white/[0.02] p-6 text-center">
                 <span className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full border border-gold-400/30 bg-gold-500/10 text-sm font-extrabold text-gold-300">
                   {paso.numero}
                 </span>
@@ -232,10 +234,11 @@ export default function Home() {
 
       {/* CTA final */}
       <section className="px-4 pb-20 sm:px-6">
-        <div className="mx-auto max-w-3xl rounded-3xl border border-gold-400/20 bg-gradient-to-br from-gold-500/[0.08] to-transparent p-8 text-center sm:p-12">
+        <div className="relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-gold-400/20 bg-gradient-to-br from-gold-500/[0.08] to-transparent p-8 text-center sm:p-12">
+          <Image src="/logo.png" alt="" width={400} height={400} className="marca-fondo" style={{ opacity: 0.05 }} aria-hidden="true" />
           <h2 className="titulo-display mb-3 text-2xl text-white sm:text-3xl">Tu tienda empieza hoy</h2>
           <p className="mb-7 text-sm text-slate-400">Crea tu cuenta gratis, publica tus productos y comparte tu link. Sin instalar nada.</p>
-          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="hero-entrada flex flex-col items-center justify-center gap-3 sm:flex-row" style={{ '--hero-delay': '360ms' } as CSSProperties}>
             <Link
               href={APP_URL}
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-gold-500 px-8 py-3.5 text-sm font-bold text-black transition hover:bg-gold-400"
