@@ -80,6 +80,8 @@
 html {
   scroll-behavior: auto;
   font-size: calc(16px * var(--tema-escala-texto, 1));
+  touch-action: manipulation;
+  -ms-touch-action: manipulation;
 }
 
 body {
@@ -89,6 +91,8 @@ body {
   color: var(--text);
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
+  touch-action: pan-x pan-y;
+  overscroll-behavior: none;
 }
 
 img {
