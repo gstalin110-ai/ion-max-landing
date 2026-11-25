@@ -259,7 +259,7 @@ export default function Home() {
       {/* Encuesta */}
       <section className="border-t border-white/10 px-4 py-12 sm:px-6">
         <div className="mx-auto max-w-5xl text-center">
-          <h2 className="text-2xl font-bold text-white sm:text-3xl">Ayúdanos a mejorar</h2>
+          <h2 className="text-2xl font-bold text-white sm:text-3xl">Ayúdanos a mejorar IÓN MAX · Tienda Online</h2>
           <p className="mt-3 text-slate-400">Responde 25 preguntas rápidas y gana 5 días Pro gratis.</p>
           <Link
             href="/encuesta"

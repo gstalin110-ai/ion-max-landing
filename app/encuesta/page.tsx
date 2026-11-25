@@ -76,7 +76,8 @@ export default function EncuestaPage() {
     <main className="min-h-screen bg-black text-white flex items-center justify-center p-4">
       <div className="w-full max-w-md rounded-3xl border border-white/10 bg-[#121416] p-8 space-y-6">
         <div className="text-center">
-          <h1 className="text-3xl font-black tracking-tight">Encuesta IÓN MAX</h1>
+          <h1 className="text-3xl font-black tracking-tight">IÓN MAX · Tienda Online</h1>
+          <p className="text-gold-400 text-xs font-bold uppercase tracking-[0.25em] mt-1">Encuesta oficial</p>
           <p className="text-slate-400 text-sm mt-2">25 preguntas · Gana 5 días Pro gratis</p>
         </div>
         {esRegistro && <input value={nombre} onChange={e => setNombre(e.target.value)} placeholder="Tu nombre" className="w-full rounded-xl bg-black/50 border border-white/10 px-4 py-3 text-sm" />}
@@ -105,7 +106,8 @@ export default function EncuestaPage() {
     <main className="min-h-screen bg-black text-white p-4 pb-32">
       <div className="mx-auto max-w-2xl space-y-6">
         <div className="text-center py-4">
-          <h1 className="text-2xl font-black">Encuesta IÓN MAX</h1>
+          <h1 className="text-3xl font-black">IÓN MAX · Tienda Online</h1>
+          <p className="text-gold-400 text-xs font-bold uppercase tracking-[0.25em] mt-1">Encuesta oficial</p>
           <p className="text-slate-400 text-sm">Pregunta {Object.keys(respuestas).length + 1} de {PREGUNTAS.length}</p>
           <div className="mt-3 h-2 rounded-full bg-white/10 overflow-hidden">
             <div className="h-full bg-[#c4cbd3] transition-all" style={{ width: `${(Object.keys(respuestas).length / PREGUNTAS.length) * 100}%` }} />

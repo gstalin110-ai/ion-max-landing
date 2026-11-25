@@ -114,13 +114,13 @@ export default function PopupEncuesta() {
           <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gold-500/15">
             <Gift size={28} className="text-gold-400" />
           </div>
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-400">Notificación</p>
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-400">IÓN MAX · Tienda Online</p>
           <h2 className="mt-2 text-2xl font-black text-white">Ayúdanos a mejorar IÓN MAX</h2>
           <p className="mt-3 text-sm text-slate-300">
             Responde <strong className="text-gold-300">25 preguntas rápidas</strong> y gana
             <strong className="text-gold-300"> 5 días Pro gratis</strong>.
           </p>
-          <p className="mt-1 text-xs text-slate-500">Tu opinión define las próximas funciones y campañas.</p>
+          <p className="mt-1 text-xs text-slate-500">Tu opinión define las próximas funciones de IÓN MAX Ultimate.</p>
 
           <Link
             href="/encuesta"
