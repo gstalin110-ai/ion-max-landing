@@ -1,4 +1,5 @@
 import AnimacionReveal from "./components/AnimacionReveal";
+import CookieBanner from "./components/CookieBanner";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -67,7 +68,34 @@ export default function RootLayout({
       className={`${inter.variable} font-sans h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans text-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'Organization',
+                  '@id': 'https://ionmaxultimate.com/#org',
+                  name: 'IÓN MAX - ULTIMATE',
+                  url: 'https://ionmaxultimate.com',
+                  logo: 'https://ionmaxultimate.com/logo.png',
+                  description: 'Marca de productos digitales. Tienda Online: marketplace para comprar, vender y reservar servicios.',
+                },
+                {
+                  '@type': 'WebSite',
+                  '@id': 'https://ionmaxultimate.com/#website',
+                  url: 'https://ionmaxultimate.com',
+                  name: 'IÓN MAX - ULTIMATE',
+                  publisher: { '@id': 'https://ionmaxultimate.com/#org' },
+                  inLanguage: 'es',
+                },
+              ],
+            }),
+          }}
+        />
         <AnimacionReveal />
+        <CookieBanner />
         <main className="flex-1">{children}</main>
       </body>
     </html>
