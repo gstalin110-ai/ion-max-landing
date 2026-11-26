@@ -31,8 +31,7 @@ export default function CookieBanner() {
         <div className="flex items-start gap-3">
           <Cookie size={18} className="mt-0.5 shrink-0 text-gold-400" />
           <p className="text-xs leading-relaxed text-slate-300">
-            Usamos cookies y almacenamiento local para mejorar tu experiencia, mantener tu sesión y medir el uso de la app.
-            Consulta nuestra{' '}
+            Usamos cookies para mejorar tu experiencia, mantener tu sesión activa y mostrarte contenido relevante. Al continuar navegando aceptas nuestra{' '}
             <a href="https://app.ionmaxultimate.com/politicas" className="text-gold-300 underline hover:text-gold-200">política de privacidad</a>.
           </p>
         </div>
